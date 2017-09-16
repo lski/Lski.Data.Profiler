@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Lski.Data.Profiler</id>
+    <version>0.1.0-alpha</version>
+    <authors>Lee Cooper</authors>
+    <licenseUrl>https://github.com/lski/Lski.Data.Profiler</licenseUrl>
+    <iconUrl>https://www.gravatar.com/avatar/e28af3724cd70eb082bdb84063964ea1</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple database query profiler for .Net</description>
+  </metadata>
+  <files>
+    <file src="..\src\bin\release\netstandard1.5\Lski.Data.Profiler.dll" target="lib\netstandard1.5\Lski.Data.Profiler.dll" />
+    <file src="..\src\bin\release\netstandard1.5\Lski.Data.Profiler.pdb" target="lib\netstandard1.5\Lski.Data.Profiler.pdb" />
+    <!--<file src="..\src\bin\release\netstandard1.5\Lski.Data.Profiler.xml" target="lib\netstandard1.5\lski.data.profiler.xml" /> should and docs here -->
+  </files>
+</package>

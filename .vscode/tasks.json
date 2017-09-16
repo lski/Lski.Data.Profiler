@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "build",
+            "command": "dotnet",
+            "type": "shell",
+            "group": "build",
+            "args": [
+                "build",
+                "${workspaceRoot}/src/Lski.Data.Profiler.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "build-release",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceRoot}/src/Lski.Data.Profiler.csproj",
+                "-c",
+                "release"
+            ],
+            "type": "shell",
+
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "nuget pack",
+            "command": "nuget",
+            "type": "shell",
+            "dependsOn": "build-release",
+            "options": {
+                "cwd": "${workspaceRoot}/nuget"
+            },
+            "args": [
+                "pack",
+                "Lski.Data.Profiler.nuspec"
+            ]
+        },
+        {
+            "taskName": "nuget publish",
+            "command": "nuget",
+            "type": "shell",
+            "args": [
+                "push",
+                "${relativeFile}",
+                "-source",
+                "https://www.nuget.org/api/v2/package"
+            ]
+        }
+    ]
+}

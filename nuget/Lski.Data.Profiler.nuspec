@@ -2,9 +2,10 @@
 <package >
   <metadata>
     <id>Lski.Data.Profiler</id>
-    <version>0.1.0-alpha</version>
+    <version>0.1.1-alpha</version>
     <authors>Lee Cooper</authors>
-    <licenseUrl>https://github.com/lski/Lski.Data.Profiler</licenseUrl>
+    <projectUrl>https://github.com/lski/Lski.Data.Profiler</projectUrl>
+    <licenseUrl>https://github.com/lski/Lski.Data.Profiler/blob/master/LICENSE</licenseUrl>
     <iconUrl>https://www.gravatar.com/avatar/e28af3724cd70eb082bdb84063964ea1</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple database query profiler for .Net</description>

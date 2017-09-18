@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lski.Data.Profiler
 {
     /// <summary>
-    /// Wraps a database connection, allowing SQL execution timings to be collected when a <see cref="MiniProfiler"/> session is started.
+    /// Wraps a database connection, allowing it to be profiled
     /// </summary>
     [System.ComponentModel.DesignerCategory("")]
     public class ProfiledDbConnection : DbConnection
@@ -32,7 +32,7 @@ namespace Lski.Data.Profiler
         /// providing query execution profiling. If profiler is null, no profiling will occur.
         /// </summary>
         /// <param name="connection"><c>Your provider-specific flavour of connection, e.g. SqlConnection, OracleConnection</c></param>
-        /// <param name="profiler">The currently started <see cref="MiniProfiler"/> or null.</param>
+        /// <param name="profiler">The currently started <see cref="IDbProfiler"/> or null.</param>
         /// <exception cref="ArgumentNullException">Throws when <paramref name="connection"/> is <c>null</c>.</exception>
         public ProfiledDbConnection(DbConnection connection, IDbProfiler profiler)
         {
